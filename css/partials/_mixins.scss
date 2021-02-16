@@ -3,7 +3,18 @@
     margin: 0;
     padding: 0;
 }
-// Центрирование по вертикали и горизонтали Флексом в Столбец
+// Центрирование по вертикали и горизонтали Флексом
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-top {
+    align-items: flex-start;
+}
+
+// Центрирование по вертикали и горизонтали Флексом Столбецов
 @mixin flex-center-column($dir:column) {
     display: flex;
     flex-direction: $dir;
@@ -11,7 +22,7 @@
     align-items: center;
 }
 
-// Центрирование по вертикали и горизонтали Флексом в Строку
+// Центрирование по вертикали и горизонтали Флексом Строк
 @mixin flex-center-row($dir:row) {
     display: flex;
     flex-direction: $dir;

@@ -3,9 +3,10 @@
 
 .calc {
     position: relative;
-    background: red;
+    background: rgb(73, 73, 73);
     height: $calc-height;
     width: $calc-width;
     @include clear;
     @include flex-center-column;
+    @include flex-top;
 }
