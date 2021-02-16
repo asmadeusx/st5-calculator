@@ -16,12 +16,12 @@ const btnResult = document.querySelector('.operations__result');
 
 console.log(display);
 console.log('====');
-// console.log(btnsNum);
-// console.log('====');
-// console.log(btnCln);
-// console.log('====');
-// console.log(btnDot);
-// console.log('====');
+console.log(btnsNum);
+console.log('====');
+console.log(btnCln);
+console.log('====');
+console.log(btnDot);
+console.log('====');
 console.log(btnPlus);
 console.log('====');
 console.log(btnMinus);
@@ -43,6 +43,46 @@ btnCln.addEventListener('click', () => {
 function OperToDisplay(target) {
     target.addEventListener('click', () => {
         display[1].innerHTML = target.innerHTML;
+        numToB();
+    });
+}
+
+function numToA() {
+    btnsNum.forEach(item => {
+        item.addEventListener('click', () => {
+            if (display[0].innerText.length < 6) {
+                display[0].innerText += item.innerText;
+                item.removeEventListener('click', () => {});
+            }
+        });
+    });
+}
+
+function numToB() {
+    btnsNum.forEach(item => {
+        item.addEventListener('click', () => {
+            if (display[2].innerText.length < 6) {
+                display[2].innerText += item.innerText;
+                item.removeEventListener('click', () => {});
+            }
+        });
+    });
+}
+
+function result() {
+    btnResult.addEventListener('click', () => {
+        if (display[1].innerHTML == btnPlus.innerHTML) {
+            console.log('+');
+        }
+        if (display[1].innerHTML == btnMinus.innerHTML) {
+            console.log('-');
+        }
+        if (display[1].innerHTML == btnMultiply.innerHTML) {
+            console.log('*');
+        }
+        if (display[1].innerHTML == btnDivide.innerHTML) {
+            console.log('/');
+        }
     });
 }
 
@@ -50,3 +90,4 @@ OperToDisplay(btnPlus);
 OperToDisplay(btnMinus);
 OperToDisplay(btnMultiply);
 OperToDisplay(btnDivide);
+numToA();

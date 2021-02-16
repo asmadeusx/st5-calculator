@@ -49,21 +49,15 @@
     width: $btn-width;
     height: $btn-height;
     @include flex-center;
-
+    font-weight: bold;
+    font-size: 25px;
     opacity: 1;
     transition: .3s opacity;
 
     &:hover {
         opacity: .8;
         cursor: pointer;
-    }
-
-    p {
-        font-weight: bold;
-        font-size: 25px;
-    }
-
-    
+    }    
 }
 
 .operations__plus,
