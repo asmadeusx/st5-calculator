@@ -8,7 +8,17 @@
     width: $display-width;
     border-bottom: 5px solid black;
     @include clear;
-    span {
-        float: right;
-    }
+    @include flex-center-row;
+    font-weight: bold;
+    font-size: 30px;
+    float: right;
+}
+
+.display__numA,
+.display__oper,
+.display__numB {
+    @include clear;
+    @include flex-center;
+    height: $display-height;
+    width: $display-width / 3;
 }
