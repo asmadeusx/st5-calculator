@@ -1,0 +1,18 @@
+@import "./partials/mixins";
+@import "./partials/params";
+
+html, body{
+    min-height: 100%;
+}
+
+body {
+    background: rgb(222,222,222);
+    background-size: cover;
+    background: linear-gradient(0deg, rgba(222,222,222,1) 0%, rgb(205, 248, 255) 100%);
+    overflow: scroll;
+}
+
+.wrapper {
+    @include clear;
+    @include flex-center-column;
+}

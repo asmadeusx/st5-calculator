@@ -1,0 +1,161 @@
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: #dedede;
+  background-size: cover;
+  background: linear-gradient(0deg, #dedede 0%, #cdf8ff 100%);
+  overflow: scroll;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc {
+  position: relative;
+  background: red;
+  height: 400px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc__display {
+  position: relative;
+  background: blue;
+  height: 80px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+.calc__buttons {
+  position: relative;
+  background: yellow;
+  height: 320px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid red;
+}
+
+.buttons__operations {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid red;
+}
+
+.buttons__num {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons__num,
+.buttons__operations {
+  background: grey;
+  text-align: center;
+}
+
+.num__col1,
+.num__col2,
+.num__col3,
+.num__col4 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col1__n1,
+.col1__n4,
+.col1__n7,
+.col1__nDot,
+.col2__n2,
+.col2__n5,
+.col2__n8,
+.col2__n0,
+.col3__n3,
+.col3__n6,
+.col3__n9,
+.col3__nCLN,
+.operations__plus,
+.operations__minus,
+.operations__multiply,
+.operations__divide {
+  position: relative;
+  width: 75px;
+  height: 80px;
+}
+.col1__n1 p,
+.col1__n4 p,
+.col1__n7 p,
+.col1__nDot p,
+.col2__n2 p,
+.col2__n5 p,
+.col2__n8 p,
+.col2__n0 p,
+.col3__n3 p,
+.col3__n6 p,
+.col3__n9 p,
+.col3__nCLN p,
+.operations__plus p,
+.operations__minus p,
+.operations__multiply p,
+.operations__divide p {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.operations__plus,
+.operations__minus,
+.operations__multiply,
+.operations__divide {
+  background: #bad5f7;
+  background: radial-gradient(circle, #bad5f7 0%, #94bbe9 100%);
+}
+
+.col1__n1,
+.col1__n4,
+.col1__n7,
+.col1__nDot,
+.col2__n2,
+.col2__n5,
+.col2__n8,
+.col2__n0,
+.col3__n3,
+.col3__n6,
+.col3__n9,
+.col3__nCLN {
+  background: #bae3f7;
+  background: radial-gradient(circle, #bae3f7 0%, #94bbe9 100%);
+  border-right: 1px solid red;
+}
+
+/*# sourceMappingURL=/style.6b54f5b7.css.map */

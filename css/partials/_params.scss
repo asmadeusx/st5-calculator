@@ -1,0 +1,18 @@
+@import "./partials/mixins";
+
+// Цвета. Раздел Пакетов
+$c-yellow: #f9d423;
+$c-grey: #7f8c8d;
+$c-red: #ff1c1c;
+$c-cyan: #1abc9c;
+// Размеры модулей
+
+// Размеры Калькулятора
+$calc-height: 400px;
+$calc-width: 300px;
+// Размеры кнопок
+$btn-height: $calc-height / 5;
+$btn-width: $calc-width / 4;
+// Размер Диспеля
+$display-height: $calc-height / 5;
+$display-width: $calc-width;

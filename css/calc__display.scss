@@ -1,0 +1,7 @@
+.calc__display {
+    position: relative;
+    background: blue;
+    height: $display-height;
+    width: $display-width;
+    @include clear;
+}

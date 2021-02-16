@@ -1,0 +1,11 @@
+@import "./partials/mixins";
+@import "./partials/params";
+
+.calc {
+    position: relative;
+    background: red;
+    height: $calc-height;
+    width: $calc-width;
+    @include clear;
+    @include flex-center-column;
+}

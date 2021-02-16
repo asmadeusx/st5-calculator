@@ -1,0 +1,86 @@
+.calc__buttons {
+    position: relative;
+    background: yellow;
+    height: $btn-height * 4;
+    width: $calc-width;
+    @include clear;
+    @include flex-center-row;
+    border-top: 1px solid red;
+}
+
+.buttons__operations {
+    @include clear;
+    @include flex-center-column;
+    border-left: 1px solid red;
+}
+
+.buttons__num {
+    @include clear;
+    @include flex-center-row;
+}
+
+.buttons__num,
+.buttons__operations {
+    background: grey;
+    text-align: center;
+}
+
+.num__col1,
+.num__col2,
+.num__col3,
+.num__col4 {
+    @include clear;
+    @include flex-center-column;
+}
+
+.col1__n1, 
+.col1__n4, 
+.col1__n7, 
+.col1__nDot, 
+.col2__n2, 
+.col2__n5, 
+.col2__n8, 
+.col2__n0, 
+.col3__n3, 
+.col3__n6, 
+.col3__n9, 
+.col3__nCLN,
+.operations__plus,
+.operations__minus,
+.operations__multiply,
+.operations__divide {
+    position: relative;
+    width: $btn-width;
+    height: $btn-height;
+    p {
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.operations__plus,
+.operations__minus,
+.operations__multiply,
+.operations__divide {
+    background: rgb(186, 213, 247);
+    background: radial-gradient(circle, rgb(186, 213, 247) 0%, rgba(148,187,233,1) 100%);
+}
+
+.col1__n1, 
+.col1__n4, 
+.col1__n7, 
+.col1__nDot, 
+.col2__n2, 
+.col2__n5, 
+.col2__n8, 
+.col2__n0, 
+.col3__n3, 
+.col3__n6, 
+.col3__n9, 
+.col3__nCLN {
+    background: rgb(186, 227, 247);
+    background: radial-gradient(circle, rgb(186, 227, 247) 0%, rgba(148,187,233,1) 100%);
+    border-right: 1px solid red;
+}
