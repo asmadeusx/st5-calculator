@@ -1,1 +1,0 @@
-{"version":3,"sources":["js/script.js"],"names":["display","document","querySelector"],"mappings":";AAAA,aAEA,IAAMA,EAAUC,SAASC,cAAc","file":"script.dc52bee5.js","sourceRoot":"..","sourcesContent":["'use strict';\r\n\r\nconst display = document.querySelector('.calc__display');\r\n// const buttons = document.querySelectorAll('');"]}
