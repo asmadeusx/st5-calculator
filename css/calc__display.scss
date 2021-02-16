@@ -1,0 +1,14 @@
+@import "./partials/mixins";
+@import "./partials/params";
+
+.calc__display {
+    position: relative;
+    background: rgb(255, 255, 255);
+    height: $display-height;
+    width: $display-width;
+    border-bottom: 5px solid black;
+    @include clear;
+    span {
+        float: right;
+    }
+}

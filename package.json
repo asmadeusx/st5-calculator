@@ -1,0 +1,34 @@
+{
+  "name": "st5-calculator",
+  "version": "1.0.0",
+  "description": "simple calc",
+  "main": "index.js",
+  "dependencies": {
+    "parcel": "^1.12.4",
+    "scss": "^0.2.4"
+  },
+  "devDependencies": {
+    "sass": "^1.32.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html --public-url ./",
+    "dev": "parcel index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmadeusx/st5-calculator.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass",
+    "js"
+  ],
+  "author": "Asmadeus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asmadeusx/st5-calculator/issues"
+  },
+  "homepage": "https://github.com/asmadeusx/st5-calculator#readme"
+}
