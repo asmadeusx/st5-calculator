@@ -20,44 +20,116 @@ let numA = 0;
 let numB = 0;
 let mathResult = 0;
 
+function clearDisplay() {
+    display.innerText = '';
+}
+
+function numToDisplay(item) {
+    display.innerText += item.innerText;
+}
+
 btnsNum.forEach(item => {
+    clearDisplay();
     item.addEventListener('click', () => {
-        display.innerText += item.innerText;
+        numToDisplay(item);
     });
+    btnDotOn();
 });
 
-btnDot.addEventListener('click', () => {
+function dot() {
     display.innerText += '.';
+    btnDot.removeEventListener('click', dot);
+}
+function btnDotOn() {
+    btnDot.addEventListener('click', dot); 
+}
+
+btnPlus.addEventListener('click', (event) => {
+    if (event.target.classList.contains('plus')) {
+        numA = Number(display.innerHTML);
+        clearDisplay();
+        event.target.classList.add('marker');
+        btnDotOn();
+    }
 });
 
-btnsOper.forEach(item => {
-    item.addEventListener('click', (event) => {
-        if (event.target.classList.contains('plus')) {
-            display.innerText += '+';
-        }
-        if (event.target.classList.contains('minus')) {
-            display.innerText += '-';
-        }
-        if (event.target.classList.contains('multiply')) {
-            display.innerText += '*';
-        }
-        if (event.target.classList.contains('divide')) {
-            display.innerText += '/';
-        }
-    });
+btnMinus.addEventListener('click', (event) => {
+    if (event.target.classList.contains('minus')) {
+        numA = Number(display.innerHTML);
+        clearDisplay();
+        event.target.classList.add('marker');
+        btnDotOn();
+    }
 });
+
+btnMultiply.addEventListener('click', (event) => {
+    if (event.target.classList.contains('multiply')) {
+        numA = Number(display.innerHTML);
+        clearDisplay();
+        event.target.classList.add('marker');
+        btnDotOn();
+    }
+});
+
+btnDivide.addEventListener('click', (event) => {
+    if (event.target.classList.contains('divide')) {
+        numA = Number(display.innerHTML);
+        clearDisplay();
+        event.target.classList.add('marker');
+        btnDotOn();
+    }
+});
+
+// btnsOper.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//         numA = Number(display.innerHTML);
+//         if (event.target.classList.contains('plus')) {
+//             item.classList.add('marker');
+//             clearDisplay();
+//         }
+//         if (event.target.classList.contains('minus')) {
+//             item.classList.add('marker');
+//             clearDisplay();
+//         }
+//         if (event.target.classList.contains('multiply')) {
+//             item.classList.add('marker');
+//             clearDisplay();
+//         }
+//         if (event.target.classList.contains('divide')) {
+//             item.classList.add('marker');
+//             clearDisplay();
+//         }
+//         btnDotOn();
+//     });
+// });
 
 // Кнопка Очищения Дисплея
-btnCln.addEventListener('click', () => {
-    display.innerHTML = '';
-});
+btnCln.addEventListener('click', clearDisplay);
 
 function result() {
-    let arr = display.innerHTML;
-    console.log(arr);
+    const marker = document.querySelector('.marker');
+    if (marker.classList.contains('plus')) {
+        mathResult = numA + numB;
+        marker.classList.remove('marker');
+    }
+    if (marker.classList.contains('minus')) {
+        mathResult = numA - numB;
+        marker.classList.remove('marker');
+    }
+    if (marker.classList.contains('multiply')) {
+        mathResult = numA * numB;
+        marker.classList.remove('marker');
+    }
+    if (marker.classList.contains('divide')) {
+        mathResult = numA / numB;
+        marker.classList.remove('marker');
+    }
+    clearDisplay();
+    display.innerHTML = mathResult;
 }
 
 // Кнопка Просчета и выдачи результата
 btnResult.addEventListener('click', () => {
+    numB = Number(display.innerHTML);
     result();
 });
