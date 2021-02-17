@@ -2,9 +2,11 @@
 
 //#region Получение элементов
 // Дисплей
-const display = document.querySelectorAll('.dsp');
+// const display = document.querySelectorAll('.dsp');
+const display = document.querySelector('.dsp');
 // Кнопки управления
 const btnsNum = document.querySelectorAll('.btnNum');
+const btnsOper = document.querySelectorAll('.buttons__operations');
 const btnCln = document.querySelector('.btnCLN');
 const btnDot = document.querySelector('.btnDot');
 const btnPlus = document.querySelector('.operations__plus');
@@ -14,39 +16,48 @@ const btnDivide = document.querySelector('.operations__divide');
 const btnResult = document.querySelector('.operations__result');
 //#endregion
 
-console.log(display);
-console.log('====');
-// console.log(btnsNum);
-// console.log('====');
-// console.log(btnCln);
-// console.log('====');
-// console.log(btnDot);
-// console.log('====');
-console.log(btnPlus);
-console.log('====');
-console.log(btnMinus);
-console.log('====');
-console.log(btnMultiply);
-console.log('====');
-console.log(btnDivide);
-console.log('====');
-console.log(btnResult);
-console.log('====');
+let numA = 0;
+let numB = 0;
+let mathResult = 0;
 
-// Кнопка Очищения Дисплея
-btnCln.addEventListener('click', () => {
-    display.forEach((e) => {
-        e.innerHTML = '';
+btnsNum.forEach(item => {
+    item.addEventListener('click', () => {
+        display.innerText += item.innerText;
     });
 });
 
-function OperToDisplay(target) {
-    target.addEventListener('click', () => {
-        display[1].innerHTML = target.innerHTML;
+btnDot.addEventListener('click', () => {
+    display.innerText += '.';
+});
+
+btnsOper.forEach(item => {
+    item.addEventListener('click', (event) => {
+        if (event.target.classList.contains('plus')) {
+            display.innerText += '+';
+        }
+        if (event.target.classList.contains('minus')) {
+            display.innerText += '-';
+        }
+        if (event.target.classList.contains('multiply')) {
+            display.innerText += '*';
+        }
+        if (event.target.classList.contains('divide')) {
+            display.innerText += '/';
+        }
     });
+});
+
+// Кнопка Очищения Дисплея
+btnCln.addEventListener('click', () => {
+    display.innerHTML = '';
+});
+
+function result() {
+    let arr = display.innerHTML;
+    console.log(arr);
 }
 
-OperToDisplay(btnPlus);
-OperToDisplay(btnMinus);
-OperToDisplay(btnMultiply);
-OperToDisplay(btnDivide);
+// Кнопка Просчета и выдачи результата
+btnResult.addEventListener('click', () => {
+    result();
+});
